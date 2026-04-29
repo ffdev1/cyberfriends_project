@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cnytcv8v1yuut"]
+
+[ext_resource type="Texture2D" uid="uid://bjpadhv7lmw34" path="res://sprites/BGs/pixellab-room-with-cybersecurity-design-1774270466206.png" id="2_01gwv"]
+[ext_resource type="PackedScene" uid="uid://bckwmwiwij06r" path="res://scenes/DialogViktorina.tscn" id="2_mgc1i"]
+
+[node name="LvViktorina" type="Node2D" unique_id=531679884]
+scale = Vector2(1.6640592, 1.6640592)
+
+[node name="Dialog" parent="." unique_id=1988498404 instance=ExtResource("2_mgc1i")]
+
+[node name="PixellabRoomWithCybersecurityDesign1774270466206" type="Sprite2D" parent="." unique_id=153273760]
+position = Vector2(587, 327.5)
+scale = Vector2(5.92, 5.1484375)
+texture = ExtResource("2_01gwv")

@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://c6h1eevamhkil"]
+
+[ext_resource type="Texture2D" uid="uid://c3ulhv8f40pjp" path="res://sprites/BGs/dasasasdsdaasdsdaasdasd.jpg" id="1_hi4w3"]
+[ext_resource type="Script" uid="uid://663mf8enahb4" path="res://scenes/credits.gd" id="1_tlwrt"]
+[ext_resource type="Theme" uid="uid://dtek1a0k1nenh" path="res://Theme/MainTheme.tres" id="2_gw1d4"]
+[ext_resource type="Texture2D" uid="uid://bl3kh4jw1bm6t" path="res://sprites/Name/NameCredits.png" id="2_spvsy"]
+[ext_resource type="Texture2D" uid="uid://bdpb5rydfi27x" path="res://sprites/Button/ReturnNormal.png" id="5_g618n"]
+[ext_resource type="Texture2D" uid="uid://dnmq76wy5po7o" path="res://sprites/Button/ReturnPressed.png" id="6_t4hkn"]
+
+[node name="Credits" type="Node2D" unique_id=361924302]
+scale = Vector2(1.6800001, 1.6800001)
+script = ExtResource("1_tlwrt")
+
+[node name="Dasasasdsdaasdsdaasdasd" type="Sprite2D" parent="." unique_id=2043128437]
+position = Vector2(575.52905, 323.5)
+scale = Vector2(1.8840818, 1.8866278)
+texture = ExtResource("1_hi4w3")
+
+[node name="Label" type="Label" parent="Dasasasdsdaasdsdaasdasd" unique_id=1570309601]
+offset_left = -286.3618
+offset_top = -43.728817
+offset_right = 284.6382
+offset_bottom = 97.27118
+theme = ExtResource("2_gw1d4")
+theme_override_font_sizes/font_size = 14
+text = "Разработчик: 
+Колесников Яков
+Руководитель проекта: 
+Ткаченко Кристина Геннадьевна
+Эксперт по Godot Engine: 
+Тананин Алексей 
+В процессе разработки выпито 2.5 л фанты
+На разработку игры потребовалось 36.6 часоа"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="NameCredits" type="Sprite2D" parent="." unique_id=1551659]
+position = Vector2(570, 145)
+scale = Vector2(8, 8)
+texture = ExtResource("2_spvsy")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1949869374]
+offset_left = 40.0
+offset_top = 529.0
+offset_right = 122.0
+offset_bottom = 611.0
+texture_normal = ExtResource("5_g618n")
+texture_pressed = ExtResource("6_t4hkn")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

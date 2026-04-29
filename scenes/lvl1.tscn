@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bah4q3k28v02k"]
+
+[ext_resource type="PackedScene" uid="uid://c4736s6msvctv" path="res://scenes/Dialog.tscn" id="1_xmh5c"]
+[ext_resource type="Texture2D" uid="uid://b2bfaw2awyqan" path="res://sprites/BGs/IMG_20260325_230025_307.png" id="3_0jtq1"]
+
+[node name="Lvl1" type="Node2D" unique_id=1981047984]
+scale = Vector2(1.6580536, 1.6580536)
+
+[node name="Dialog" parent="." unique_id=1988498404 instance=ExtResource("1_xmh5c")]
+
+[node name="Img20260325230025307" type="Sprite2D" parent="." unique_id=86881322]
+position = Vector2(572.0198, 329.30902)
+scale = Vector2(0.7749024, 0.6748047)
+texture = ExtResource("3_0jtq1")

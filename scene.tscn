@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://313iqy3m0eaw"]
+
+[ext_resource type="Script" uid="uid://bfkvktmkwhw4s" path="res://Main.gd" id="1_u3cyc"]
+[ext_resource type="Texture2D" uid="uid://c3ulhv8f40pjp" path="res://sprites/BGs/dasasasdsdaasdsdaasdasd.jpg" id="1_ulcgi"]
+[ext_resource type="Texture2D" uid="uid://cjd4wu6vew55s" path="res://sprites/Button/ExitNormal.png" id="3_xlvrw"]
+[ext_resource type="Texture2D" uid="uid://d0qn1aqp3ll7h" path="res://sprites/Button/ExitPressed.png" id="4_73fnb"]
+[ext_resource type="Texture2D" uid="uid://cha152kjudy54" path="res://sprites/Button/CreditsNormal.png" id="5_5juve"]
+[ext_resource type="Texture2D" uid="uid://cf0jll0mkexdm" path="res://sprites/Button/PlayPressed.png" id="5_m7jmp"]
+[ext_resource type="Texture2D" uid="uid://bn1uetqpbvsks" path="res://sprites/Button/CreditsPressed.png" id="6_fy5k1"]
+[ext_resource type="Texture2D" uid="uid://bi4f0w2g586r7" path="res://sprites/Name/plash1.png" id="8_5c1cw"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y2354"]
+load_path = "res://.godot/imported/PlayNormal.png-226a215b1b7cc1fea433b43d237593a3.ctex"
+
+[node name="Main" type="Node2D" unique_id=1436495903]
+scale = Vector2(1.6738046, 1.6738046)
+script = ExtResource("1_u3cyc")
+
+[node name="Dasasasdsdaasdsdaasdasd" type="Sprite2D" parent="." unique_id=1630000404]
+position = Vector2(575.52905, 323.5)
+scale = Vector2(1.8840818, 1.8866278)
+texture = ExtResource("1_ulcgi")
+
+[node name="Exit" type="TextureButton" parent="." unique_id=1815551557]
+offset_left = 435.9375
+offset_top = 500.0
+offset_right = 1587.9375
+offset_bottom = 1148.0
+scale = Vector2(0.239, 0.121)
+texture_normal = ExtResource("3_xlvrw")
+texture_pressed = ExtResource("4_73fnb")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="TextureButton" parent="." unique_id=2128555468]
+offset_left = 435.9375
+offset_top = 399.00003
+offset_right = 1587.9375
+offset_bottom = 1047.0
+scale = Vector2(0.239, 0.121)
+texture_normal = ExtResource("5_5juve")
+texture_pressed = ExtResource("6_fy5k1")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Play" type="TextureButton" parent="." unique_id=392587053]
+offset_left = 435.9375
+offset_top = 298.0
+offset_right = 1587.9375
+offset_bottom = 946.0
+scale = Vector2(0.23877601, 0.12063473)
+texture_normal = SubResource("CompressedTexture2D_y2354")
+texture_pressed = ExtResource("5_m7jmp")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plash1" type="Sprite2D" parent="." unique_id=238581559]
+position = Vector2(575.9375, 158.285)
+scale = Vector2(4.9375, 4.9375)
+texture = ExtResource("8_5c1cw")
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
