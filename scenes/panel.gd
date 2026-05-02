@@ -15,20 +15,33 @@ extends Panel
 
 var dialog = [
 
-  { "type": "text", "name": "Мурик", "text": "Эх, вот бы сейчас нормальный корм... Большую пачку! И чтобы надолго.", "sound": "murik", "anim":"Murik_Idle" },
-  { "type": "text", "name": "Мурик", "text": "Ого, скидка девяносто процентов? Так вообще бывает?", "sound": "murik", "anim":"phone_up" },
-  { "type": "text", "name": "Мурик", "text": "Так… а как это оплатить?", "sound": "murik", "anim":"" },
-  { "type": "text", "name": "Маня", "text": "Подожди. Ты правда в это веришь?", "sound": "manya", "anim":"phone_down" },
-  { "type": "text", "name": "Мурик", "text": "Ну… там же написано.", "sound": "murik", "anim":"" },
-  { "type": "text", "name": "Мурик", "text": "Кстати, а ты кто вообще?", "sound": "murik", "anim":"" },
-  { "type": "text", "name": "Маня", "text": "Меня зовут Маня. Я — защитница интернет-пространства.", "sound": "manya", "anim":"manya_speak" },
-  { "type": "text", "name": "Мурик", "text": "А я Мурик. Только я не очень понимаю, о чём ты говоришь.", "sound": "murik", "anim":"manya_idle" },
-  { "type": "text", "name": "Маня", "text": "Подожди. Ты правда не знаешь, что такое интернет?", "sound": "manya", "anim":"manya_speak" },
-  { "type": "text", "name": "Мурик", "text": "Я знаю, что там есть прикольные видео с котами и огурцами!", "sound": "murik", "anim":"manya_idle" },
-  { "type": "text", "name": "Маня", "text": "Вот поэтому тебе и нужно узнать правила безопасности в интернете.", "sound": "manya", "anim":"" },
-  { "type": "text", "name": "Маня", "text": "Пойдём ко мне. Сейчас всё объясню.", "sound": "manya", "anim":"" },
-  { "type": "text", "name": "Мурик", "text": "Ладно… только без сложных слов.", "sound": "murik", "anim":"" },
-  { "type": "event", "event": "dialog_ended" }
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Эх… вот бы сейчас нормальный корм. Большую пачку — и чтобы надолго.","en":"Man… I wish I had some good cat food. A big pack that lasts forever!"}, "sound":"murik","anim":"Murik_Idle" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Ого, скидка девяносто процентов? Такое вообще бывает?","en":"Whoa, 90% off? Is that even real?"}, "sound":"murik","anim":"phone_up" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Так… а как это оплатить?","en":"Okay… how do I pay for this?"}, "sound":"murik","anim":"" },
+
+{ "type": "text", "name": {"ru":"Маня","en":"Maya"}, "text": {"ru":"Подожди. Ты правда в это веришь?","en":"Wait. You actually believe that?"}, "sound":"manya","anim":"phone_down" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Ну… там же написано.","en":"Well… it says so."}, "sound":"murik","anim":"" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Кстати, а ты кто вообще?","en":"Uh… who are you, anyway?"}, "sound":"murik","anim":"" },
+
+{ "type": "text", "name": {"ru":"Маня","en":"Maya"}, "text": {"ru":"Меня зовут Маня. Я защитница интернет-пространства.","en":"My name is Maya. I protect the internet."}, "sound":"manya","anim":"manya_speak" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"А я Мурик. Только я не очень понимаю, о чём ты говоришь.","en":"I'm Muffin… but I don’t really get what you mean."}, "sound":"murik","anim":"manya_idle" },
+
+{ "type": "text", "name": {"ru":"Маня","en":"Maya"}, "text": {"ru":"Подожди. Ты правда не знаешь, что такое интернет?","en":"Wait… you don’t know what the internet is?"}, "sound":"manya","anim":"manya_speak" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Я знаю, что там есть прикольные видео с котами и огурцами!","en":"I know it has funny cat videos… and cucumbers!"}, "sound":"murik","anim":"manya_idle" },
+
+{ "type": "text", "name": {"ru":"Маня","en":"Maya"}, "text": {"ru":"Вот поэтому тебе и нужно узнать правила безопасности в интернете.","en":"Yeah… that’s exactly why you need to learn internet safety."}, "sound":"manya","anim":"" },
+
+{ "type": "text", "name": {"ru":"Маня","en":"Maya"}, "text": {"ru":"Пойдём ко мне. Сейчас всё объясню.","en":"Come with me. I’ll explain everything."}, "sound":"manya","anim":"" },
+
+{ "type": "text", "name": {"ru":"Мурик","en":"Muffin"}, "text": {"ru":"Ладно… только без сложных слов.","en":"Okay… just keep it simple, please."}, "sound":"murik","anim":"" },
+
+{ "type": "event", "event": "dialog_ended" }
 
 ]
 
@@ -60,26 +73,33 @@ func show_line():
 
 	var line = dialog[index]
 
-	if line["type"] == "text":
-		show_text(line)
+	#if line["type"] == "text":
+		#show_text(line)
 
 	if line["type"] == "choice":
 		show_choices(line)
+		return
 
 	if line["type"] == "jump":
 		index = line["goto"]
 		show_line()
+		return
 
 	if line["type"] == "event":
 		run_event(line["event"])
-
+		return
+	
+	show_text(line)
+	
+	name_label.text = line["name"][Lang.current_lang]
+	text.text = line["text"][Lang.current_lang]
 
 func show_text(line):
 
 	choices_box.visible = false
 
-	name_label.text = line["name"]
-	text.text = line["text"]
+	name_label.text = line["name"][Lang.current_lang]
+	text.text = line["text"][Lang.current_lang]
 	text.visible_ratio = 0
 	
 	if line["anim"] == 'Murik_Idle':
@@ -127,7 +147,7 @@ func show_choices(line):
 	for c in line["choices"]:
 
 		var button = Button.new()
-		button.text = c["text"]
+		button.text = c["text"][Lang.current_lang]
 
 		button.pressed.connect(func():
 			index = c["goto"]

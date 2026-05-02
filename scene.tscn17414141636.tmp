@@ -20,7 +20,7 @@ load_path = "res://.godot/imported/PlayNormal.png-226a215b1b7cc1fea433b43d237593
 scale = Vector2(1.6738046, 1.6738046)
 script = ExtResource("1_u3cyc")
 
-[node name="bg" type="Sprite2D" parent="." unique_id=1630000404]
+[node name="Dasasasdsdaasdsdaasdasd" type="Sprite2D" parent="." unique_id=1630000404]
 position = Vector2(575.52905, 323.5)
 scale = Vector2(1.8840818, 1.8866278)
 texture = ExtResource("1_ulcgi")

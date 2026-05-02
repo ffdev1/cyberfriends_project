@@ -11,39 +11,40 @@
 scale = Vector2(1.6800001, 1.6800001)
 script = ExtResource("1_tlwrt")
 
-[node name="Dasasasdsdaasdsdaasdasd" type="Sprite2D" parent="." unique_id=2043128437]
+[node name="bg" type="Sprite2D" parent="." unique_id=2043128437]
 position = Vector2(575.52905, 323.5)
 scale = Vector2(1.8840818, 1.8866278)
 texture = ExtResource("1_hi4w3")
 
-[node name="Label" type="Label" parent="Dasasasdsdaasdsdaasdasd" unique_id=1570309601]
-offset_left = -286.3618
-offset_top = -43.728817
-offset_right = 284.6382
-offset_bottom = 97.27118
+[node name="Label" type="Label" parent="bg" unique_id=1570309601]
+anchors_preset = -1
+anchor_bottom = -0.233978
+offset_left = -287.1453
+offset_top = -49.370033
+offset_right = 283.8547
+offset_bottom = 163.62997
 theme = ExtResource("2_gw1d4")
 theme_override_font_sizes/font_size = 14
-text = "Разработчик: 
-Колесников Яков
-Руководитель проекта: 
-Ткаченко Кристина Геннадьевна
-Эксперт по Godot Engine: 
-Тананин Алексей 
-В процессе разработки выпито 2.5 л фанты
-На разработку игры потребовалось 36.6 часоа"
+text = "Программирование, логика и диалоговая система:
+Алексей Тананин
+Дизайн, персонажи и анимации:
+Яков Колесников
+
+Спасибо за прохождение
+и внимание к теме цифровой безопасности!"
 horizontal_alignment = 1
 metadata/_edit_use_anchors_ = true
 
 [node name="NameCredits" type="Sprite2D" parent="." unique_id=1551659]
-position = Vector2(570, 145)
+position = Vector2(573.21423, 437.49994)
 scale = Vector2(8, 8)
 texture = ExtResource("2_spvsy")
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1949869374]
-offset_left = 40.0
-offset_top = 529.0
-offset_right = 122.0
-offset_bottom = 611.0
+offset_left = 63.69048
+offset_top = 513.6905
+offset_right = 145.69048
+offset_bottom = 595.6905
 texture_normal = ExtResource("5_g618n")
 texture_pressed = ExtResource("6_t4hkn")
 stretch_mode = 0
