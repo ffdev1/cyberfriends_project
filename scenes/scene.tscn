@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://313iqy3m0eaw"]
+
+[ext_resource type="Script" uid="uid://bfkvktmkwhw4s" path="res://scripts/Main.gd" id="1_5yiy0"]
+[ext_resource type="Texture2D" uid="uid://c3ulhv8f40pjp" path="res://sprites/BGs/dasasasdsdaasdsdaasdasd.jpg" id="2_0f71q"]
+[ext_resource type="Texture2D" uid="uid://db45ipi48jto2" path="res://sprites/Button/RusButtonNormal.png" id="3_1id6j"]
+[ext_resource type="Texture2D" uid="uid://cx1p6y74jmbtj" path="res://sprites/Button/RusButtonPressed.png" id="4_dv0eb"]
+[ext_resource type="Texture2D" uid="uid://biumcxfa1dict" path="res://sprites/Button/EngButtonNormal.png" id="5_tvkk6"]
+[ext_resource type="Texture2D" uid="uid://dhmkva0rp6mko" path="res://sprites/Button/EngButtonPressed.png" id="6_8cc7s"]
+[ext_resource type="Texture2D" uid="uid://cjd4wu6vew55s" path="res://sprites/Button/ExitNormal.png" id="7_r2e7w"]
+[ext_resource type="Texture2D" uid="uid://d0qn1aqp3ll7h" path="res://sprites/Button/ExitPressed.png" id="8_2v74y"]
+[ext_resource type="Texture2D" uid="uid://cha152kjudy54" path="res://sprites/Button/CreditsNormal.png" id="9_c7gmr"]
+[ext_resource type="Texture2D" uid="uid://bn1uetqpbvsks" path="res://sprites/Button/CreditsPressed.png" id="10_fsfa6"]
+[ext_resource type="Texture2D" uid="uid://cf0jll0mkexdm" path="res://sprites/Button/PlayPressed.png" id="11_t6gja"]
+[ext_resource type="Texture2D" uid="uid://bi4f0w2g586r7" path="res://sprites/Name/plash1.png" id="12_cvxd1"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_y2354"]
+load_path = "res://.godot/imported/PlayNormal.png-226a215b1b7cc1fea433b43d237593a3.ctex"
+
+[node name="Main" type="Node2D" unique_id=1436495903]
+scale = Vector2(1.6738046, 1.6738046)
+script = ExtResource("1_5yiy0")
+
+[node name="bg" type="Sprite2D" parent="." unique_id=1630000404]
+position = Vector2(575.52905, 323.5)
+scale = Vector2(1.8840818, 1.8866278)
+texture = ExtResource("2_0f71q")
+
+[node name="RusLocale" type="TextureButton" parent="." unique_id=1767197516]
+offset_left = 434.93726
+offset_top = 419.40378
+offset_right = 568.1666
+offset_bottom = 514.9944
+texture_normal = ExtResource("3_1id6j")
+texture_pressed = ExtResource("4_dv0eb")
+stretch_mode = 0
+
+[node name="EngLocale" type="TextureButton" parent="." unique_id=1294384982]
+offset_left = 578.3232
+offset_top = 419.40378
+offset_right = 710.9551
+offset_bottom = 514.9944
+texture_normal = ExtResource("5_tvkk6")
+texture_pressed = ExtResource("6_8cc7s")
+stretch_mode = 0
+
+[node name="Exit" type="TextureButton" parent="." unique_id=1815551557]
+offset_left = 436.13214
+offset_top = 523.956
+offset_right = 1588.1321
+offset_bottom = 1171.956
+scale = Vector2(0.239, 0.121)
+texture_normal = ExtResource("7_r2e7w")
+texture_pressed = ExtResource("8_2v74y")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Credits" type="TextureButton" parent="." unique_id=2128555468]
+offset_left = 435.9375
+offset_top = 332.7748
+offset_right = 1587.9375
+offset_bottom = 980.7748
+scale = Vector2(0.239, 0.121)
+texture_normal = ExtResource("9_c7gmr")
+texture_pressed = ExtResource("10_fsfa6")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Play" type="TextureButton" parent="." unique_id=392587053]
+offset_left = 435.9375
+offset_top = 244.35349
+offset_right = 1587.9375
+offset_bottom = 892.3535
+scale = Vector2(0.23877601, 0.12063473)
+texture_normal = SubResource("CompressedTexture2D_y2354")
+texture_pressed = ExtResource("11_t6gja")
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Plash1" type="Sprite2D" parent="." unique_id=238581559]
+position = Vector2(575.9375, 126.657555)
+scale = Vector2(4.9375, 4.9375)
+texture = ExtResource("12_cvxd1")
+
+[connection signal="pressed" from="RusLocale" to="." method="_on_rus_locale_pressed"]
+[connection signal="pressed" from="EngLocale" to="." method="_on_eng_locale_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]

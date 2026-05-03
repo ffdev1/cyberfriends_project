@@ -1,21 +1,28 @@
 # CyberFriends
 
-## 📌 Description
-CyberFriends is an educational game designed to teach basic cybersecurity concepts to younger audiences.
+An educational game about cybersecurity for younger audiences, developed in Godot Engine.
 
-## 🎯 Goal
-The goal of the project is to present cybersecurity topics in an interactive and accessible way.
+## Overview
+CyberFriends is an interactive visual novel designed to teach basic cybersecurity concepts through story-driven gameplay and dialogue.
 
-## 🛠️ Technologies
-- Godot Engine (GDScript)
+## Features
+- Custom dialogue system with branching choices
+- Event-driven interaction system
+- Character animations and scene transitions
+- Full localization support (Russian / English)
+- User interaction via UI and input system
 
-## ⚙️ Features
-- Custom dialogue system
-- Interactive story structure
-- Basic animations
+## Technical Details
+- Developed in Godot Engine using GDScript
+- Dialogue system built from scratch
+- Localization implemented for multi-language support
 
-## 🚧 Status
-Completed
+## Educational Goal
+The project aims to introduce younger users to cybersecurity awareness in an accessible and engaging format.
 
-## 👤 My role
-I developed the dialogue system and implemented core game logic.
+## Gameplay
+
+![Gameplay](assets/cf.gif)
+![Gameplay](assets/cf_choice.gif)
+![Gameplay](assets/cf_virus.gif)
+

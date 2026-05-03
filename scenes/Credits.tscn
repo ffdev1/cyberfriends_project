@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c6h1eevamhkil"]
 
 [ext_resource type="Texture2D" uid="uid://c3ulhv8f40pjp" path="res://sprites/BGs/dasasasdsdaasdsdaasdasd.jpg" id="1_hi4w3"]
-[ext_resource type="Script" uid="uid://663mf8enahb4" path="res://scenes/credits.gd" id="1_tlwrt"]
+[ext_resource type="Script" uid="uid://663mf8enahb4" path="res://scripts/credits.gd" id="1_tlwrt"]
 [ext_resource type="Theme" uid="uid://dtek1a0k1nenh" path="res://Theme/MainTheme.tres" id="2_gw1d4"]
 [ext_resource type="Texture2D" uid="uid://bl3kh4jw1bm6t" path="res://sprites/Name/NameCredits.png" id="2_spvsy"]
 [ext_resource type="Texture2D" uid="uid://bdpb5rydfi27x" path="res://sprites/Button/ReturnNormal.png" id="5_g618n"]
@@ -18,6 +18,7 @@ texture = ExtResource("1_hi4w3")
 
 [node name="Label" type="Label" parent="bg" unique_id=1570309601]
 anchors_preset = -1
+anchor_top = -0.233978
 anchor_bottom = -0.233978
 offset_left = -287.1453
 offset_top = -49.370033
